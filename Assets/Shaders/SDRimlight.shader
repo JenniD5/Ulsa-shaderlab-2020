@@ -29,7 +29,7 @@ shader "Custom/SDRimlight"
      {
       float3 nVD=normalize(IN.viewDir);
       float3 NdotV = dot(nVD, o.Normal);
-      half rim= 1 - saturate(NdotV);
+      half rim= 1 - saturate(NdotV); //para que lo use de la manera correcta 
       o.Emission = _RimColor.rgb * pow(rim, _Rimpower); //pow ...eleva al cuadrado 
       
         

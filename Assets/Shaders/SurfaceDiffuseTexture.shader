@@ -15,7 +15,7 @@
     }
     CGPROGRAM 
      //tipo de shader  como se llama a funcion que la va a rendear     
-       #pragma surface surf Lambert  //tipo de luz 
+       #pragma surface surf Lambert  
         half4 _Albedo; //los colores son tipo 4, mismo nombre que en properties 
 
         sampler2D _MainTex; //para inicializarla 
