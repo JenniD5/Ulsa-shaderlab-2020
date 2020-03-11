@@ -20,12 +20,12 @@ shader "Custom/SDBandedL"
         
         half4 _Albedo;
         half _Steps;
-        int _Buffer=256;
+        
 
         half4 LightingBanded(SurfaceOutput s, half3 LightDir, half atten)
         {
            half NdotL= max (0, dot(s.Normal, LightDir));  
-           half LightBandsMultiplier =_Steps/_Buffer;
+           half LightBandsMultiplier =_Steps/256;
            half LightBandsAdditive=_Steps/2;
            fixed bandedDiff = floor((NdotL*256 + LightBandsAdditive) /_Steps)*LightBandsMultiplier;
 
